@@ -4,12 +4,17 @@
 */
 
 :root {
-    --bg-light: #f6f8fb;
-    --bg-accent-light: linear-gradient(135deg, #ffffff 0%, #eef4ff 100%);
-    --text-light: #0b1220;
+    /* Single-color palette requested by user */
+    --bg-light: #535b61;
+    /* main background color */
+    --bg-accent-light: #535b61;
+    /* previously gradient, now solid */
+    --text-light: #e6eef7;
+    /* light text for contrast */
 
-    --bg-dark: #0b1220;
-    --bg-accent-dark: linear-gradient(135deg, #071022 0%, #0b2740 100%);
+    /* Keep parity for dark mode (same solid background is fine) */
+    --bg-dark: #535b61;
+    --bg-accent-dark: #535b61;
     --text-dark: #e6eef7;
 }
 
@@ -22,20 +27,19 @@ body {
 
 /* Default (light) */
 body {
-    background: var(--bg-accent-light);
+    /* Use the solid background color (no gradient) */
     background-color: var(--bg-light);
-    /* fallback */
     color: var(--text-light);
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    transition: background-color 200ms ease, background 200ms ease, color 200ms ease;
+    transition: background-color 200ms ease, color 200ms ease;
 }
 
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
     body {
-        background: var(--bg-accent-dark);
+        /* keep the same solid color in dark mode to match the requested palette */
         background-color: var(--bg-dark);
         color: var(--text-dark);
     }
