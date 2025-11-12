@@ -1,46 +1,29 @@
-/* /c:/Users/paulo/.git/exercicios-terminal/site-pessoal/style.css
-    Background colors that follow the user's light/dark theme (prefers-color-scheme).
-    Tweak the hex values to match your exact theme if needed.
-*/
-
-:root {
-    /* Single-color palette requested by user */
-    --bg-light: #535b61;
-    /* main background color */
-    --bg-accent-light: #535b61;
-    /* previously gradient, now solid */
-    --text-light: #e6eef7;
-    /* light text for contrast */
-
-    /* Keep parity for dark mode (same solid background is fine) */
-    --bg-dark: #535b61;
-    --bg-accent-dark: #535b61;
-    --text-dark: #e6eef7;
-}
-
-/* Reset spacing so background covers full viewport */
-html,
 body {
-    height: 100%;
-    margin: 0;
+    background-color: #121e29;
 }
-
-/* Default (light) */
-body {
-    /* Use the solid background color (no gradient) */
-    background-color: var(--bg-light);
-    color: var(--text-light);
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    transition: background-color 200ms ease, color 200ms ease;
+header h1 {
+    color: orange;
+    font-family: arial;
+    font-size: 20px;
 }
-
-/* Dark theme */
-@media (prefers-color-scheme: dark) {
-    body {
-        /* keep the same solid color in dark mode to match the requested palette */
-        background-color: var(--bg-dark);
-        color: var(--text-dark);
-    }
+article h2 {
+    color: lightblue;
+    font-family: arial;
+    font-size: 12px;
+}
+article p {
+    color: white;
+    font-family: arial;
+    font-size: 10px;
+}
+article a {
+    color: orange;
+    font-family: arial;
+    font-size: 10px;
+}
+footer {
+    background-color: #121e29;
+    color: white;
+    font-family: arial;
+    font-size: 8px;
 }
